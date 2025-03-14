@@ -22,6 +22,8 @@ int main() {
             printf("Informe uma frase novamente: ");  
         } 
     }
+
+    printf("Frase original: %s\n", frase);
     
     // Substituindo o caractere do ENTER pelo fim de string (\0) por causa do fgets
     if(frase[strlen(frase) - 1] == '\n') {
@@ -37,10 +39,7 @@ int main() {
 
     // Imprimindo a frase criptografada
     printf("Frase criptograda: ");
-    for (int i = 0; i < strlen(frase); i++) {
-        printf("%c", frase[i]);
-    }
-
+    printf("%s", frase);
     printf("\nTamanho da frase: %ld", strlen(frase));
 
     return 0;
