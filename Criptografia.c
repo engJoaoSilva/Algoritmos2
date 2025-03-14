@@ -9,17 +9,18 @@
 **********************************************/
 
 int main() {
-    char frase[50];
+    char frase[100];
     printf("Informe uma frase terminando com (;) : ");
     
     // Forçando o usuario a digitar uma frase terminando em (;)
     while(1) {
-        fgets(frase, sizeof(frase), stdin);
-        if(frase[strlen(frase) - 2] == ';')
+        scanf("%[^\n]", frase);
+        if(frase[strlen(frase) - 1] == ';')
             break;
         else {
+            __fpurge(stdin);
             printf("ERROR! frase precisa terminar com ;\n");
-            printf("Informe uma frase novamente: ");  
+            printf("Informe uma frase novamente: ");
         } 
     }
 
